@@ -26,19 +26,16 @@ Rev will also supply any default values through the API itself if you do not pro
 
 Once the files have been uploaded to Rev, they will be removed from the DME directory. The result of the ingestion will be logged. You may view this log at **Monitor > Upload** Log.
 
-[block:callout]
-{
-  "type": "info",
-  "title": "Note",
-  "body": "If the upload fails for any reason, often due to network issues, you may manually start the upload process again by using the **Upload** button under the **Rev Interface** page."
-}
-[/block]
+> 📘 Note
+>
+> If the upload fails for any reason, often due to network issues, you may manually start the upload process again by using the **Upload** button under the **Rev Interface** page.
+
 ## Monitor a Bulk Video Upload
 
 The [Upload Log](doc:upload-log) on the **Monitor** page is used to provide status on files that Rev uploads from the DME. The date, time, file name, and status of each ingestion is provided.
 
 Keep in mind that the DME will continue the upload process controlled by the following variables (Note: These are system variables that may not be modified at this time):
 
-* **Max_Rev_Uploads**: The number of simultaneous upload attempts that may occur. Default = 50.
-* **Max_Reload_Retry**: The number of times to retry an upload. Default = 10.
-* **Delay_Reload_Retry**: The number of seconds to delay before the next retry. Default = 300.
+* **Max\_Rev\_Uploads**: The number of simultaneous upload attempts that may occur. Default = 50.
+* **Max\_Reload\_Retry**: The number of times to retry an upload. Default = 10.
+* **Delay\_Reload\_Retry**: The number of seconds to delay before the next retry. Default = 300.
