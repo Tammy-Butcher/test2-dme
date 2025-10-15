@@ -30,41 +30,63 @@ To create a trace capture:
 
 7. Send the trace file to [Vbrick Support](mailto:support@vbrick.com).
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/e3bd163c9266c7698943231dad2b5d1e7b41d64a3b1bd3ea8aaedc99082e54bb-traceCapture.png",
-        null,
-        null
-      ],
-      "align": "center"
-    }
-  ]
-}
-[/block]
+<Image align="center" src="https://files.readme.io/e3bd163c9266c7698943231dad2b5d1e7b41d64a3b1bd3ea8aaedc99082e54bb-traceCapture.png" />
 
+<Table align={["left","left"]}>
+  <thead>
+    <tr>
+      <th>
+        Field
+      </th>
 
-[block:parameters]
-{
-  "data": {
-    "h-0": "Field",
-    "h-1": "Description",
-    "0-0": "Page Refresh Interval",
-    "0-1": "Choose how often to refresh the information on the page.",
-    "1-0": "Interface to capture from",
-    "1-1": "**net0**, **net1**, **net2**, or **net3** - Use this to select a specific interface to capture. (rarely used).  \n  \n**bond0** captures a trace across all enabled network interfaces. This is the most common and recommended selection.  \n  \n**any** - captures a trace for both external and internal interfaces (all **net**, **bond0** and **lo**). Note that captures using this option will often contain duplicate entries for a given packet.  \n  \n**lo** - captures a trace of the local host interface (127.0.0.1) only.",
-    "2-0": "Capture file size",
-    "2-1": "Specify the size (default = 50 MB) of the capture file. The capture will terminate when file size reaches this value.",
-    "3-0": "Status",
-    "3-1": "Displays **Capturing** while a trace capture is in progress or blank when finished or idle."
-  },
-  "cols": 2,
-  "rows": 4,
-  "align": [
-    "left",
-    "left"
-  ]
-}
-[/block]
+      <th>
+        Description
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        Page Refresh Interval
+      </td>
+
+      <td>
+        Choose how often to refresh the information on the page.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Interface to capture from
+      </td>
+
+      <td>
+        * \*net&#x30;**,**&#x6E;et&#x31;**,**&#x6E;et&#x32;**, or**net3\*\* - Use this to select a specific interface to capture. (rarely used).  
+        * \*bond0\*\* captures a trace across all enabled network interfaces. This is the most common and recommended selection.  
+        * \*an&#x79;**- captures a trace for both external and internal interfaces (all**ne&#x74;**,**&#x62;ond0**and**lo\*\*). Note that captures using this option will often contain duplicate entries for a given packet.  
+        * \*lo\*\* - captures a trace of the local host interface (127.0.0.1) only.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Capture file size
+      </td>
+
+      <td>
+        Specify the size (default = 50 MB) of the capture file. The capture will terminate when file size reaches this value.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Status
+      </td>
+
+      <td>
+        Displays **Capturing** while a trace capture is in progress or blank when finished or idle.
+      </td>
+    </tr>
+  </tbody>
+</Table>
