@@ -10,22 +10,9 @@ metadata:
 next:
   description: ''
 ---
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/8b80fdafdf37c19f72120248fabdd5b125e07ea2444a83c8c056e27fedca0374-sshRunningServices.png",
-        "",
-        ""
-      ],
-      "align": "center",
-      "caption": "SSH Running Service Tasks"
-    }
-  ]
-}
-[/block]
-
+<Image alt="SSH Running Service Tasks" align="center" src="https://files.readme.io/8b80fdafdf37c19f72120248fabdd5b125e07ea2444a83c8c056e27fedca0374-sshRunningServices.png">
+  SSH Running Service Tasks
+</Image>
 
 ## System Services (Status & Restart)
 
