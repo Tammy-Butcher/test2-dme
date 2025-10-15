@@ -2,3 +2,4 @@
 - ssh-reset-tasks
 - ssh-realtime-usage-snapshots
 - ssh-network-monitoring-tasks
+- ssh-running-service-tasks
