@@ -2,3 +2,4 @@
 - network-interface-cards
 - set-nat-ip-address
 - network-time-synchronization
+- add-proxy-server
