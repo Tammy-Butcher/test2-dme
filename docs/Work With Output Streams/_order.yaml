@@ -3,3 +3,4 @@
 - rtp-relay
 - transport-stream-out
 - vbrick-multicast
+- hls-streaming
