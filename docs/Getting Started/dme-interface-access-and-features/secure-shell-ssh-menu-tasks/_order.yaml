@@ -5,3 +5,4 @@
 - ssh-running-service-tasks
 - ssh-reboot-tasks
 - ssh-reset-tasks-1
+- ssh-password-reset-and-kernel-message-tasks
