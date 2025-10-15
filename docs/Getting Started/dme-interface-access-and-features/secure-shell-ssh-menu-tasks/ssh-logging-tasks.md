@@ -10,22 +10,9 @@ metadata:
 next:
   description: ''
 ---
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/6b569b6b78d422570c7b78481cd397410b5f4c36b0e409ec0f71823299c54176-sshLoggingTasks.png",
-        "",
-        ""
-      ],
-      "align": "center",
-      "caption": "SSH Logging Tasks"
-    }
-  ]
-}
-[/block]
-
+<Image alt="SSH Logging Tasks" align="center" src="https://files.readme.io/6b569b6b78d422570c7b78481cd397410b5f4c36b0e409ec0f71823299c54176-sshLoggingTasks.png">
+  SSH Logging Tasks
+</Image>
 
 ## Generate Log Collection for Vbrick
 
