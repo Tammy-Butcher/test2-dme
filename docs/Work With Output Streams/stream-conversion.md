@@ -26,65 +26,120 @@ To use this feature:
 
 1. Select an **input stream**. 
 
-2. An **output stream** will be automatically named. However, if you rename it – the name _must_ be unique across all of your DMEs. 
+2. An **output stream** will be automatically named. However, if you rename it – the name *must* be unique across all of your DMEs. 
 
 3. Select a **Predefined Profile**.
 
 4. At this point you can enable the stream. You may also choose to further define characteristics within the **Video Target** area. When complete, you can enable it at that time.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/ab40036-streamConversion.png",
-        "streamConversion.png",
-        1114
-      ],
-      "align": "center",
-      "caption": "Use the Stream Conversion page to modify live streams"
-    }
-  ]
-}
-[/block]
+<Image title="streamConversion.png" alt={1114} align="center" src="https://files.readme.io/ab40036-streamConversion.png">
+  Use the Stream Conversion page to modify live streams
+</Image>
 
-[block:parameters]
-{
-  "data": {
-    "h-0": "Field",
-    "h-1": "Description",
-    "0-0": "Enabled",
-    "0-1": "Select to enable or disable the conversion. Disabled by default.",
-    "1-0": "Input Stream",
-    "1-1": "Name of the Vbrick pre-configured source streams you may select from the dropdown list Each stream, along with a **Vbrick Predefined Profile**, will contain the recommended **Video Target** settings. You may overwrite these settings if desired.",
-    "2-0": "Output Stream",
-    "2-1": "The stream name for the converted output stream. This name must be unique across all DMEs in your ecosystem. The default **GUID** name is automatically assigned but you may overwrite. If you overwrite this field, it is advised that you use the **Generate Unique Name** button to ensure you retain a unique name for the output stream.",
-    "3-0": "Predefined Profile",
-    "3-1": "Name of the Vbrick pre-configured proportional profiles you may select from the dropdown list based on the Input Stream you have selected. Each profile, along with an **Input Stream** selected above, will define the recommended Video Target settings including bit rate, resolution, and frame rate.  \n  \nIn the image above for example, the Input Stream is defined at 1280x720 resolution while the profile specifies a half-size. As a result, the final resolution in Video Target settings is defined as 640x360.  \n  \nYou may also select common stream and common television profiles. You may overwrite these settings if desired.  \n  \n**Note**: You should not change the Framerate if you have closed captioning.",
-    "4-0": "Quality",
-    "4-1": "Medium = default. Set to Extreme, High, Medium, or Low. Higher and Extreme quality settings have higher bit rates and will require more processing.",
-    "5-0": "Video Targets",
-    "5-1": "Sets the video, audio, and resolution parameters for the output stream based on the Input Stream and Predefined Profile you select.",
-    "6-0": "Extra Parms",
-    "6-1": "The DME currently uses the ffmpeg library for doing stream conversions. Use this field to enter specific parameters to ffmpeg for your streams.  \n  \nFor a library of possible conversion options please visit <https://ffmpeg.org/ffmpeg.html>.  \n  \nThis is an advanced feature, so use additional options with care. They will override the selected template in the **Conversion Type**. As such, not all possible combinations are tested or supported by Vbrick. Also, if not used properly they can adversely affect DME performance as this is a CPU intensive feature."
-  },
-  "cols": 2,
-  "rows": 7,
-  "align": [
-    "left",
-    "left"
-  ]
-}
-[/block]
+<Table align={["left","left"]}>
+  <thead>
+    <tr>
+      <th>
+        Field
+      </th>
+
+      <th>
+        Description
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        Enabled
+      </td>
+
+      <td>
+        Select to enable or disable the conversion. Disabled by default.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Input Stream
+      </td>
+
+      <td>
+        Name of the Vbrick pre-configured source streams you may select from the dropdown list Each stream, along with a **Vbrick Predefined Profile**, will contain the recommended **Video Target** settings. You may overwrite these settings if desired.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Output Stream
+      </td>
+
+      <td>
+        The stream name for the converted output stream. This name must be unique across all DMEs in your ecosystem. The default **GUID** name is automatically assigned but you may overwrite. If you overwrite this field, it is advised that you use the **Generate Unique Name** button to ensure you retain a unique name for the output stream.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Predefined Profile
+      </td>
+
+      <td>
+        Name of the Vbrick pre-configured proportional profiles you may select from the dropdown list based on the Input Stream you have selected. Each profile, along with an **Input Stream** selected above, will define the recommended Video Target settings including bit rate, resolution, and frame rate.  
+
+        In the image above for example, the Input Stream is defined at 1280x720 resolution while the profile specifies a half-size. As a result, the final resolution in Video Target settings is defined as 640x360.  
+
+        You may also select common stream and common television profiles. You may overwrite these settings if desired.  
+
+        * \*Note\*\*: You should not change the Framerate if you have closed captioning.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Quality
+      </td>
+
+      <td>
+        Medium = default. Set to Extreme, High, Medium, or Low. Higher and Extreme quality settings have higher bit rates and will require more processing.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Video Targets
+      </td>
+
+      <td>
+        Sets the video, audio, and resolution parameters for the output stream based on the Input Stream and Predefined Profile you select.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Extra Parms
+      </td>
+
+      <td>
+        The DME currently uses the ffmpeg library for doing stream conversions. Use this field to enter specific parameters to ffmpeg for your streams.  
+
+        For a library of possible conversion options please visit [https://ffmpeg.org/ffmpeg.html](https://ffmpeg.org/ffmpeg.html).  
+
+        This is an advanced feature, so use additional options with care. They will override the selected template in the **Conversion Type**. As such, not all possible combinations are tested or supported by Vbrick. Also, if not used properly they can adversely affect DME performance as this is a CPU intensive feature.
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 > ❗️ Caution
-> 
+>
 > When working with streams with closed captions, do not change the framerate. You can still change the resolution and bitrate, but changing the framerate will have adverse effects on CC data. In these cases, please keep framerate set to Current Rate.
 
 As noted, there are a number of [best practices](doc:use-case-stream-conversion-with-hls#stream-conversion-best-practices) to keep in mind when using stream conversion features.  Make sure you review them fully!
 
 > 🚧 Important!
-> 
+>
 > DMEs 7550 and 7570 come standard with the Stream Conversion feature. If you are on a DME 7530 and have licensed and activated the Stream Conversion separately, it is critical that you monitor the CPU usage of this feature. For more information see the [Licensing and New Feature](doc:licensing-and-new-features) topic.
 
 ## Framerate Considerations
@@ -96,5 +151,5 @@ Systems that do not generate constant frame will often be converted into black-v
 This behavior has been seen with CMS.
 
 > 👍 Tip
-> 
+>
 > If you have been using DME v3.27.1 and upgrade to a newer version, the stream conversion page may appear completely blank afterwards. This can be fixed by logging in and using the [SSH admin interface](doc:secure-shell-ssh-administration) and selecting Option 12. This will repair your stream conversion settings.
