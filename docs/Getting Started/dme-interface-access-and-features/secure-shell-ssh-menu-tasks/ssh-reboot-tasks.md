@@ -10,22 +10,9 @@ metadata:
 next:
   description: ''
 ---
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/7b25fb6d4812557c73e0675d748fe09876b5df0a7d4b75a7cfcbf14c0f4080e9-sshRebootTasks.png",
-        "",
-        "SSH Reboot Tasks"
-      ],
-      "align": "center",
-      "caption": "SSH Reboot Tasks"
-    }
-  ]
-}
-[/block]
-
+<Image alt="SSH Reboot Tasks" align="center" src="https://files.readme.io/7b25fb6d4812557c73e0675d748fe09876b5df0a7d4b75a7cfcbf14c0f4080e9-sshRebootTasks.png">
+  SSH Reboot Tasks
+</Image>
 
 ## Reboot Device
 
