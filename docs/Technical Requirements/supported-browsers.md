@@ -11,13 +11,11 @@ next:
   description: ''
 ---
 The DME provides administration via a Web interface over (either) HTTP or HTTPS. While the interface operates on a wide selection of browsers, only specific browsers are tested and supported. “Supported” is defined as “the admin interface will operate” within the browser version.
-[block:callout]
-{
-  "type": "info",
-  "title": "Note",
-  "body": "The browsers specified here only cover the DME Admin UI. Please refer to Rev's [browser compatibility chart](https://revdocs.vbrick.com/docs/browser-os-and-device-compatibility) for technical requirements for the Rev interface, playback retrieval, and/or specific players."
-}
-[/block]
+
+> 📘 Note
+>
+> The browsers specified here only cover the DME Admin UI. Please refer to Rev's [browser compatibility chart](https://revdocs.vbrick.com/docs/browser-os-and-device-compatibility) for technical requirements for the Rev interface, playback retrieval, and/or specific players.
+
 In general, the DME supports the top PC browsers (Microsoft Internet Explorer, Microsoft Edge, Google Chrome, Firefox) and top Macintosh browser (Safari) under the following stipulations:
 
 1. Support is provided for the most currently generally available released browser version, and immediately previous released version. “Versions” are defined as any released software – which may differ in branding, major, minor, and/or build number. These versions may be manually downloaded or as part of automated update.
@@ -28,7 +26,7 @@ The DME Admin UI is tested with the most recent browsers during its development.
 
 ### Browser / Certificate Restrictions
 
-In a move to improve security, Apple announced that starting September 1st, 2020, its browsers would no longer trust SSL/TSL certificates that meet two criteria: (1) issued ON or AFTER September 1, 2020, and (2) have validity periods greater than 398 days. (Additional details can be found at [https://support.apple.com/en-us/HT211025](https://support.apple.com/en-us/HT211025)https://support.apple.com/en-us/HT211025). Other browsers followed suit to meet the same restrictions.
+In a move to improve security, Apple announced that starting September 1st, 2020, its browsers would no longer trust SSL/TSL certificates that meet two criteria: (1) issued ON or AFTER September 1, 2020, and (2) have validity periods greater than 398 days. (Additional details can be found at [https://support.apple.com/en-us/HT211025](https://support.apple.com/en-us/HT211025)[https://support.apple.com/en-us/HT211025](https://support.apple.com/en-us/HT211025)). Other browsers followed suit to meet the same restrictions.
 
 This restriction does not apply to servers with SSL/TLS certificates issued before September 1st, 2020. Those certificates will be honored until expiry date.
 
