@@ -20,43 +20,30 @@ If you have added a new virtual or physical disk, then the **Maintenance** > **D
 
 This page shows the size and status of **Existing Disks** (i.e. those disks that were present originally or were added using the “provisioning” process) and of **New Disks Found** which have not yet been provisioned.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/5b2a793-diskStatus.png",
-        "diskStatus.png",
-        656
-      ],
-      "align": "center",
-      "caption": "The Disk Status page displays all existing disks and new disks ready to be provisioned"
-    }
-  ]
-}
-[/block]
+<Image title="diskStatus.png" alt={656} align="center" src="https://files.readme.io/5b2a793-diskStatus.png">
+  The Disk Status page displays all existing disks and new disks ready to be provisioned
+</Image>
 
+* **Page Refresh Interval**:
+  * Never - never refresh the page
+  * 30 seconds - refresh the page every 30 seconds
 
-- **Page Refresh Interval**:
-  - Never - never refresh the page
-  - 30 seconds - refresh the page every 30 seconds
+* **Existing Disks**:
+  * Disk Name - name of the disk
+  * Size - configured size in KB
+  * Status - displays either "Built-in Disk" or "Provisioning" if a provisioning is in process
 
-- **Existing Disks**:
-  - Disk Name - name of the disk
-  - Size - configured size in KB
-  - Status - displays either "Built-in Disk" or "Provisioning" if a provisioning is in process
+* **New Disks Found**:
+  * Disk Name - name of the disk
+  * Size - configured size in KB
 
-- **New Disks Found**:
-  - Disk Name - name of the disk
-  - Size - configured size in KB
-
-- **Provision**: Shown only when a new disk has been found. Click the named button to start the provisioning process for that disk. Note that this step is _irreversible_.
+* **Provision**: Shown only when a new disk has been found. Click the named button to start the provisioning process for that disk. Note that this step is *irreversible*.
 
 > 👍 Tip
-> 
+>
 > When extending space with Virtual Disks, Vbrick recommends creating additional virtual disks and provisioning them using the **Maintenance** > **Disk Status** page. 
-> 
-> Keep in mind that VM hosts allow the expansion of already provisioned virtual disks, they do _not_ automatically expand the OS disk partitions contained within. This means that the DME does not detect that expansion of the partition on the virtual disk so the added space will not be detected.
+>
+> Keep in mind that VM hosts allow the expansion of already provisioned virtual disks, they do *not* automatically expand the OS disk partitions contained within. This means that the DME does not detect that expansion of the partition on the virtual disk so the added space will not be detected.
 
 ## Provisioning a New Disk
 
@@ -67,9 +54,9 @@ It is also important to note that for VM installs Vbrick only supports the expan
 While VM hosts may allow the expansion of virtual disks, they do not automatically expand the disk partitions within the VM OS. Meaning, the DME does not detect that expansion of the partition on the virtual disk. The solution in this case is to add an additional new virtual disk.
 
 > ❗️ Caution
-> 
-> Be aware that disk provisioning is _irreversible_. Once you have added a new virtualized disk, it _cannot_ be removed. _Always_ create a VMWare "snapshot" before you begin so that you can revert to you original configuration if anything goes wrong. 
-> 
+>
+> Be aware that disk provisioning is *irreversible*. Once you have added a new virtualized disk, it *cannot* be removed. *Always* create a VMWare "snapshot" before you begin so that you can revert to you original configuration if anything goes wrong. 
+>
 > Provisioning a disk is not the same as adding an iSCSI disk to the DME. If you are adding an iSCSI disk see the topic on **SAN/iSCSI Setup** instead.
 
 To provision a new disk in a virtual environment:
@@ -88,64 +75,25 @@ To provision a new disk in a virtual environment:
 
    As noted, a new disk will be shown in the **New Disks Found** area (shown below) and a named button will let you **provision** the new disk. If you added more than one disk, the button will provision only one disk at a time and you will need to repeat the provisioning process for each additional disk.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/09c1d29-newDiskFound.png",
-        "newDiskFound.png",
-        656
-      ],
-      "align": "center",
-      "caption": "Your new disk appears in the New Disks Found area and a named button lets you provision the new disk."
-    }
-  ]
-}
-[/block]
+<Image title="newDiskFound.png" alt={656} align="center" src="https://files.readme.io/09c1d29-newDiskFound.png">
+  Your new disk appears in the New Disks Found area and a named button lets you provision the new disk.
+</Image>
 
+7. Press the **Provision Disk** button to begin provisioning the new disk as an extension to the existing disk. A pop‑up message will indicate approximately how long this will take. (The provisioning time is usually minimal but may take several hours depending on the type of disk being added.) *Be aware that this will stop all streaming services from the DME until provisioning is complete and the device reboots*.
 
-7. Press the **Provision Disk** button to begin provisioning the new disk as an extension to the existing disk. A pop‑up message will indicate approximately how long this will take. (The provisioning time is usually minimal but may take several hours depending on the type of disk being added.) _Be aware that this will stop all streaming services from the DME until provisioning is complete and the device reboots_.
-
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/5c40e2e-diskProvisioning.png",
-        "diskProvisioning.png",
-        676
-      ],
-      "align": "center",
-      "caption": "You are provided an estimate as to how long provisioning will take in both the pop-up and on the Disk Status page."
-    }
-  ]
-}
-[/block]
-
+<Image title="diskProvisioning.png" alt={676} align="center" src="https://files.readme.io/5c40e2e-diskProvisioning.png">
+  You are provided an estimate as to how long provisioning will take in both the pop-up and on the Disk Status page.
+</Image>
 
 > 🚧 Important!
-> 
+>
 > All streaming services from the DME are stopped until provisioning is complete.
 
 8. When provisioning is complete, the DME will reboot, the streaming services will restart, and the **Maintenance** > **Disk Status** page will show the new disk as active and available for use.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/742a271-finalDiskStatus.PNG",
-        "finalDiskStatus.PNG",
-        657
-      ],
-      "align": "center",
-      "caption": "The newly added disk is available after a reboot"
-    }
-  ]
-}
-[/block]
-
+<Image title="finalDiskStatus.PNG" alt={657} align="center" src="https://files.readme.io/742a271-finalDiskStatus.PNG">
+  The newly added disk is available after a reboot
+</Image>
 
 9. Navigate to the **DME Status (Snapshot)** link at the top of the **Configuration Menu** and the **Disk Status** section will show exactly how much space is in use and available for use.
 
@@ -154,7 +102,7 @@ To provision a new disk in a virtual environment:
 If you are using a DME on Hyper-V, the steps to provision a new disk are largely the same as documented above. However, you need to perform some steps in Hyper-V first.
 
 > ❗️ Caution!
-> 
+>
 > Vbrick has tested and verified the steps below on Hyper-V running on Win Server 2019 with DME v3.34+.  No other configuration has been tested or is guaranteed to work.
 
 To provision a new disk in a DME Hyper-V environment:
@@ -178,16 +126,16 @@ You should be able to do this multiple times if needed.
 
 Q. Why the 32GB and 100GB IDE controllers instead of SCSI controllers? Does the new 250GB disk need to be IDE?
 
- _A. We create the package using IDE because it’s the default, it’s what we test in our QA lab, and we were hoping for compatibility with more customers.   SCSI controller should be ok for any of the disks. _
+ *A. We create the package using IDE because it’s the default, it’s what we test in our QA lab, and we were hoping for compatibility with more customers.   SCSI controller should be ok for any of the disks.*
 
 ***
 
 Q. Why are the 32GB and 100GB Dynamically expanded VHD instead of Fixed Size VHD? Does the new 250GB disk need to be Dynamic or it can be Fixed?
 
-_A. Fixed is fine and could be used for any of the original or added disks.  We create the package using Dynamic to help manage the size of the package for distribution.  There are some performance disadvantages for Dynamic but the DME is ok with those with the assumption that the defined space will always be available from the virtual host.  (The DME cannot tolerate overprovisioned hosts.)_
+*A. Fixed is fine and could be used for any of the original or added disks.  We create the package using Dynamic to help manage the size of the package for distribution.  There are some performance disadvantages for Dynamic but the DME is ok with those with the assumption that the defined space will always be available from the virtual host.  (The DME cannot tolerate overprovisioned hosts.)*
 
 ***
 
 Q. We learned v3.25 was released April 2021. Is there any reason why the image is not "Generation 2 Virtual Machine" Hyper-V?  Will v3.29 released in Sep 2023 be with image "Generation 2 Virtual Machine" Hyper-V?
 
-_A. DME does not require any of the new features available in Gen 2 VMs so all Hyper-V DME versions to-date have used Gen 1 to give our customers the most flexible backward compatibility.  We are considering a move to Gen 2 in the future._
+*A. DME does not require any of the new features available in Gen 2 VMs so all Hyper-V DME versions to-date have used Gen 1 to give our customers the most flexible backward compatibility.  We are considering a move to Gen 2 in the future.*
