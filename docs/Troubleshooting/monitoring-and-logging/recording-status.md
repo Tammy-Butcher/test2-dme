@@ -12,32 +12,20 @@ next:
 ---
 The **Monitor** > **Recording Status** page provides real-time status on any ongoing recordings on this DME that are set to record. DMEs must be set in Rev first to serve as a recording device for live streams. Refer to Media Settings > [Recording Settings](https://revdocs.vbrick.com/docs/set-dme-recording-options) (in Rev Help) to specify primary and secondary recording options for DMEs.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/17f8827-recordingStatus.png",
-        "recordingStatus.png",
-        869
-      ],
-      "align": "center",
-      "caption": "View Active Recordings on the Recording Status page. Hover over a stream for additional data"
-    }
-  ]
-}
-[/block]
+<Image title="recordingStatus.png" alt={869} align="center" src="https://files.readme.io/17f8827-recordingStatus.png">
+  View Active Recordings on the Recording Status page. Hover over a stream for additional data
+</Image>
 
 Table controls include:
 
-- **Page Refresh Interval**: This drop-down will control how often the page will refresh. Refreshing will get up to date information on each of the recordings. It is From the drop-down, select the page refresh interval.
+* **Page Refresh Interval**: This drop-down will control how often the page will refresh. Refreshing will get up to date information on each of the recordings. It is From the drop-down, select the page refresh interval.
 
-- **Table Filter**: This field, defaulted to “Enter text to filter table” allows users to filter the Active Recordings table below. This feature is useful for quickly finding streams in a large table. This value is not retained over a page refresh.
+* **Table Filter**: This field, defaulted to “Enter text to filter table” allows users to filter the Active Recordings table below. This feature is useful for quickly finding streams in a large table. This value is not retained over a page refresh.
 
-- **Reload**: This button will reload the Monitor and Logs > Recording Status page.
+* **Reload**: This button will reload the Monitor and Logs > Recording Status page.
 
 > 👍 Tip
-> 
+>
 > If you have a large (>5) number of recordings, it is recommended not recommended that you automatically refresh the page. It is recommended that you use the Reload Button instead of a low Page Refresh Interval to reduce load on DME.
 
 Primary use cases to view this page include:
@@ -59,7 +47,7 @@ The **Active Recordings** table will list all ongoing recordings (in accordance 
 
 Additionally, the hover state for each displayed stream will provide more data. This includes:
 
-- **WebCast ID** (which ties the recording back to a Rev WebCast)
-- **Start time** of the recording
-- Maximum **recording time** (this is the maximum allowable time for the recording, and recording will stop by default after the max time)
-- **Output file name** (useful to tie recording back to a Rev WebCast)
+* **WebCast ID** (which ties the recording back to a Rev WebCast)
+* **Start time** of the recording
+* Maximum **recording time** (this is the maximum allowable time for the recording, and recording will stop by default after the max time)
+* **Output file name** (useful to tie recording back to a Rev WebCast)
