@@ -12,22 +12,9 @@ next:
 ---
 Use the **Input Configuration** > **Transport Stream In** page to configure streams pushed via unicast or multicast to the **Multi-Protocol** server using transport stream. The number of streams supported depends on the model of the DME.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/15d2f1c-transportStreamIn.png",
-        "transportStreamIn.png",
-        718
-      ],
-      "align": "center",
-      "caption": "Use Transport Stream In to configure streams pushed via unicast or multicast"
-    }
-  ]
-}
-[/block]
-
+<Image title="transportStreamIn.png" alt={718} align="center" src="https://files.readme.io/15d2f1c-transportStreamIn.png">
+  Use Transport Stream In to configure streams pushed via unicast or multicast
+</Image>
 
 ## MPG2TS Streams
 
@@ -41,27 +28,71 @@ For example, when configuring a **Transport Stream In** (with MPEG‑2 content) 
 
 Similarly, you must use the same **Stream Name** (preceded with **mp2:**) when configuring the stream for **Transport Stream Out**. Using this stream as input for HLS or other conversions will not work. Passthrough Transport Streams preserve KLV data when being delivered through the DME.
 
-[block:parameters]
-{
-  "data": {
-    "h-0": "Field",
-    "h-1": "Description",
-    "0-0": "Stream Name",
-    "0-1": "Name used within the DME to connect input and output streams. Use the default stream name (**TSPullStream1, TSPullStream2**, etc.) or override as desired. See above, MPG2TS Streams (with MP2 content) must be prepended with **mp2:**",
-    "1-0": "Multicast / Localhost",
-    "1-1": "Source of multicast stream/local host. If the stream is a unicast to the DME, enter the DME's IP address. For source-specific multicast addresses, enter it as \"multicastipaddress:sourceipaddress.\".  \n  \n**Example**: `232.1.1.1:172.22.2.166`  \n  \n**Note**: Source-specific multicast is _not_ supported for IPv6.",
-    "2-0": "Port",
-    "2-1": "Port on which the stream is unicast or multicast. If there are multiple unicast input streams, be sure that each input stream has a unique port number.",
-    "3-0": "Enable",
-    "3-1": "Use to enable an input stream.",
-    "4-0": "Status",
-    "4-1": "Read only: Disabled | Connected | Receiving"
-  },
-  "cols": 2,
-  "rows": 5,
-  "align": [
-    "left",
-    "left"
-  ]
-}
-[/block]
+<Table align={["left","left"]}>
+  <thead>
+    <tr>
+      <th>
+        Field
+      </th>
+
+      <th>
+        Description
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        Stream Name
+      </td>
+
+      <td>
+        Name used within the DME to connect input and output streams. Use the default stream name (**TSPullStream1, TSPullStream2**, etc.) or override as desired. See above, MPG2TS Streams (with MP2 content) must be prepended with **mp2:**
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Multicast / Localhost
+      </td>
+
+      <td>
+        Source of multicast stream/local host. If the stream is a unicast to the DME, enter the DME's IP address. For source-specific multicast addresses, enter it as "multicastipaddress:sourceipaddress.".  
+
+        * \*Example\*\*: `232.1.1.1:172.22.2.166`  
+        * \*Note\*\*: Source-specific multicast is *not* supported for IPv6.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Port
+      </td>
+
+      <td>
+        Port on which the stream is unicast or multicast. If there are multiple unicast input streams, be sure that each input stream has a unique port number.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Enable
+      </td>
+
+      <td>
+        Use to enable an input stream.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Status
+      </td>
+
+      <td>
+        Read only: Disabled | Connected | Receiving
+      </td>
+    </tr>
+  </tbody>
+</Table>
