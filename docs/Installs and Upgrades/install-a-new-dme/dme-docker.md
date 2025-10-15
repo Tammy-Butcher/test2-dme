@@ -16,12 +16,12 @@ The DME is designed as an embedded device with a large flexible feature set. It 
 
 Key Assumptions:
 
-- For the first release of the DME [Docker](https://www.docker.com/) container, the entire feature set provided by the DME will run in a single container. 
-- The DME **Docker** container uses a **Rocky 8** operating system with **systemd** managing the services running in the container.
-- The DME **Docker** container runs in **Docker Host Network** mode.  An overview and tutorial on [Host networking](https://docs.docker.com/network/host/) can be found in the **Docker** documentation.  The DME uses IPV6 internally so it needs to be enabled on the host whether or not you intend to have DME do networking via IPV6.  
-- DME **Docker** container is targeted to be deployed on **RedHat 8 Host v239** host OS -- with standard OS packages for **RHEL8**. After v3.34, it can also be deployed on a **Rocky 8** host OS -- with standard OS packages.
-- The DME **Docker** container must be provisioned (at a minimum) with the requisite hardware (CPU, Memory, Disk) requirements dependent upon the licensing and use cases required by each customer.  For this Docker version, we require the same HW requirements per DME size as required by our VM installations.  Please see [Virtual DME Recommendations](doc:pre-installation-requirements#virtual-dme-hardware-specifications-and-load-recommendations) to make sure you understand the hardware and available load requirements for your specific use case. 
-- The host OS enables the **firewalld** service by default. This service must be either disabled or configured to allow the ports in the table below.
+* For the first release of the DME [Docker](https://www.docker.com/) container, the entire feature set provided by the DME will run in a single container. 
+* The DME **Docker** container uses a **Rocky 8** operating system with **systemd** managing the services running in the container.
+* The DME **Docker** container runs in **Docker Host Network** mode.  An overview and tutorial on [Host networking](https://docs.docker.com/network/host/) can be found in the **Docker** documentation.  The DME uses IPV6 internally so it needs to be enabled on the host whether or not you intend to have DME do networking via IPV6.  
+* DME **Docker** container is targeted to be deployed on **RedHat 8 Host v239** host OS -- with standard OS packages for **RHEL8**. After v3.34, it can also be deployed on a **Rocky 8** host OS -- with standard OS packages.
+* The DME **Docker** container must be provisioned (at a minimum) with the requisite hardware (CPU, Memory, Disk) requirements dependent upon the licensing and use cases required by each customer.  For this Docker version, we require the same HW requirements per DME size as required by our VM installations.  Please see [Virtual DME Recommendations](doc:pre-installation-requirements#virtual-dme-hardware-specifications-and-load-recommendations) to make sure you understand the hardware and available load requirements for your specific use case. 
+* The host OS enables the **firewalld** service by default. This service must be either disabled or configured to allow the ports in the table below.
 
 It is important that you review [Pre-Installation Requirements](doc:pre-installation-requirements) and DME [installation](doc:install-a-new-dme) procedures. 
 
@@ -58,12 +58,12 @@ As mentioned above, the DME Docker container must be run in **Docker Host Networ
 
 There are two different methods for pulling, running, and managing the DME Docker container, including running with or without using the [Docker Compose plugin](https://docs.docker.com/compose/install/linux/#install-the-plugin-manually) installed. 
 
-Both methods _require_ that you retrieve the DME Docker image. The DME Docker image is available in the Vbrick Docker repo. If you do not already have access to the Docker repo and image, please contact [Vbrick Support](https://vbrick.com/support/) to gain access.
+Both methods *require* that you retrieve the DME Docker image. The DME Docker image is available in the Vbrick Docker repo. If you do not already have access to the Docker repo and image, please contact [Vbrick Support](https://vbrick.com/support/) to gain access.
 
 ### The Docker Compose Plugin
 
 > 👍 Tip
-> 
+>
 > We recommend that the Docker Compose plugin is installed on the Docker host machine and used to manage your deployment.
 
  To install the plugin on RHEL8 or Rocky 8 use the following command:
@@ -73,20 +73,20 @@ Both methods _require_ that you retrieve the DME Docker image. The DME Docker im
     /usr/local/bin/docker-compose
 ```
 
-A sample Docker Compose **YAML **file (displayed below) will be supplied along with details regarding the DME docker repository. 
+A sample Docker Compose **YAML** file (displayed below) will be supplied along with details regarding the DME docker repository. 
 
 > 📘 Note
-> 
+>
 > It is assumed that commands are run from the same folder as a YAML file named `docker-compose.yaml`.  Compose, by default, operates on a file named docker-compose.yaml in the local directory. 
-> 
+>
 > If you want to run Compose with a different filename or directory, you can use the `-f` option with any of the [Compose file run actions](doc:dme-installation-in-a-docker-container#docker-compose-file-run-command-field-descriptions) to specify the path and file name.
 
 ### Using the Docker Compose Plugin
 
 > 📘 Note
-> 
-> The sample YAML Compose file provided by Vbrick _must_ be customized for your environment. Each of the fields in the file is displayed below.
-> 
+>
+> The sample YAML Compose file provided by Vbrick *must* be customized for your environment. Each of the fields in the file is displayed below.
+>
 > Our sample Compose file includes a version line which was supported in older Compose versions but may cause a yaml warning message that 'version' is obsolete in newer Compose versions.  The message can be ignored.
 
 <h4>Docker Compose Sample YAML File</h4>
@@ -137,14 +137,14 @@ To manage your **DME Docker** container using the **Compose** plugin, complete e
 
 3. Upgrade the DME Docker container.  If Vbrick releases a new version of the DME, to apply this upgrade without losing data and/or files stored in the container's persistent volume, perform the following commands:
 
-   `docker-compose stop`  
-   `docker-compose down`  
-   `docker-compose pull`  
+   `docker-compose stop`\
+   `docker-compose down`\
+   `docker-compose pull`\
    `docker-compose up -d`
 
 ### Without Using the Docker Compose Plugin
 
-To manage your **DME Docker** container _without_ using the **Compose** plugin, complete each step below.
+To manage your **DME Docker** container *without* using the **Compose** plugin, complete each step below.
 
 1. Pull the Docker image from the Vbrick repo provided to you.
 
@@ -154,7 +154,7 @@ To manage your **DME Docker** container _without_ using the **Compose** plugin, 
 
    `docker volume create dme-content-disk`
 
-3. Run the DME Docker container. This command _must_ be customized for your Host environment, demonstrated below.
+3. Run the DME Docker container. This command *must* be customized for your Host environment, demonstrated below.
 
    ```
    docker run –itd --tmpfs /tmp --tmpfs /run –v /sys/fs/cgroup:/sys/fs/cgroup:ro --mount source=dme-content- 
@@ -164,10 +164,10 @@ To manage your **DME Docker** container _without_ using the **Compose** plugin, 
    651425670494.dkr.ecr.us-east-1.amazonaws.com/dme-docker or<dme-docker
    ```
 
-4. Upgrade the DME Docker container.  A DME running on Docker cannot be upgraded from Rev Admin.  When Vbrick releases a new version of the DME, to apply the upgrade without losing data and/or files stored in the container's persistent volume, perform the following commands. Make sure to map the same Docker volumes you used _before_ the upgrade:
+4. Upgrade the DME Docker container.  A DME running on Docker cannot be upgraded from Rev Admin.  When Vbrick releases a new version of the DME, to apply the upgrade without losing data and/or files stored in the container's persistent volume, perform the following commands. Make sure to map the same Docker volumes you used *before* the upgrade:
 
-     `docker stop dme-docker-container`  
-     `docker rm dme-docker-container`  
+     `docker stop dme-docker-container`\
+     `docker rm dme-docker-container`\
      `docker pull retro2.lab.vbrick.com:4043/dme-docker`
 
    ```
@@ -178,7 +178,7 @@ To manage your **DME Docker** container _without_ using the **Compose** plugin, 
    ```
 
 > 📘 Note
-> 
+>
 > It is important that you type the run command instead of attempting to copy/paste from this document to your Docker host because non-printable characters can be added during a copy/paste that may corrupt your command line entry.
 
 ## Initialize the DME Docker Container
@@ -207,80 +207,204 @@ Once you confirm the DME Docker container is running, initialize it by completin
 
 This table describes how the fields in the run command or Docker Compose file are used by the Docker container and calls out any fields that may or should be modified.
 
-[block:parameters]
-{
-  "data": {
-    "h-0": "Field",
-    "h-1": "Description",
-    "0-0": "cap_add",
-    "0-1": "Allows the user to add capabilities to the docker container. It is required that this field be set to CAP_SYS_NICE. In addition the user may choose to add the following capabilities to the DME docker container. This field should include CAP_SYS_TIME in order to allow the DME to utilize network time protocol (NTP). This field should include CAP_SYS_ADMIN in order to allow the user to use SFTP (SSH FTP) as an external FTP mode to connect to the DME.",
-    "1-0": "dns:/--dns",
-    "1-1": "Allows the user to specify the addresses of the DNS servers available in their network. This field should be changed by the user to match the address(es) of the DNS servers on their network.",
-    "2-0": "dns_search:/--dns-search vb.loc",
-    "2-1": "Allows the user to set the search domain for DNS. This field should be changed by the user to match the search domain that is appropriate for their network.",
-    "3-0": "hostname:/--hostname",
-    "3-1": "This field must be modified before running the DME Docker container.  It must be set to the name that matches the Docker container IP address in your network DNS configuration.  \n  \nIf you change this field it is recommended that you stop and remove an existing Docker container before running the container with the changed hostname. You do not need to remove any created volumes.",
-    "4-0": "network_mode/--network",
-    "4-1": "This field must be set to host and should _not_ be modified.",
-    "5-0": "container_name/--name",
-    "5-1": "The default container name is `dme-docker-container` but can be modified to fit your preference.",
-    "6-0": "image",
-    "6-1": "This must be set to [651425670494.dkr.ecr.us-east-1.amazonaws.com/dme-docker](651425670494.dkr.ecr.us-east-1.amazonaws.com/dme-docker) if you pulled the image from the Vbrick docker repo in Amazon, or \"dme-docker\" if an exported image was provided to you by a Vbrick representative.  \n  \n**Note:**  This may, and likely will, be changed with the full release of this feature.",
-    "7-0": "restart",
-    "7-1": "Optional field that is used to describe the restart behavior of the container.",
-    "8-0": "cpuset:/--cpuset-cpus",
-    "8-1": "Allows you to specify which processors the container is allowed to use in its processing.  Note that this value should be set appropriately based on your use case. Please see [Virtual DME Recommendations](doc:pre-installation-requirements#virtual-dme-hardware-specifications-and-load-recommendations) to make sure you understand the hardware and available load requirements for your specific use case.  \n  \nIt is important to specify this value. It is used by the container not only for status but also for determining how many processes and or threads will be spawned by various services within the container.",
-    "9-0": "mem_limit:/–memory",
-    "9-1": "Allows you to restrict the amount of RAM that the container is allowed to use. Note that this number should be set appropriately based on your use case.  Please see [Virtual DME Recommendations](doc:pre-installation-requirements#virtual-dme-hardware-specifications-and-load-recommendations) to make sure you understand the hardware and available load requirements for your specific use case.  \n  \nThe RAM usage reported on the DME Docker container web interface will include both the memory used by the DME-specific code plus the memory overhead required by Docker to operate the container. This value will match that reported by the Docker stats command on the Docker host. This is important to note if you have set memory limits for the container in your run command or compose file.  \n  \nThis is an optional field.",
-    "10-0": "memswap_limit:/--memory-swap",
-    "10-1": "Allows you to specify the maximum amount of swap available to the container. This field value is the sum of physical ram plus swap. Note that this number should be set appropriately based on your use case.  Please see [Virtual DME Recommendations](doc:pre-installation-requirements#virtual-dme-hardware-specifications-and-load-recommendations) to make sure you understand the hardware and available load requirements for your specific use case.  \n  \nThis is an optional field."
-  },
-  "cols": 2,
-  "rows": 11,
-  "align": [
-    "left",
-    "left"
-  ]
-}
-[/block]
+<Table align={["left","left"]}>
+  <thead>
+    <tr>
+      <th>
+        Field
+      </th>
 
+      <th>
+        Description
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        cap\_add
+      </td>
+
+      <td>
+        Allows the user to add capabilities to the docker container. It is required that this field be set to CAP\_SYS\_NICE. In addition the user may choose to add the following capabilities to the DME docker container. This field should include CAP\_SYS\_TIME in order to allow the DME to utilize network time protocol (NTP). This field should include CAP\_SYS\_ADMIN in order to allow the user to use SFTP (SSH FTP) as an external FTP mode to connect to the DME.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        dns\:/--dns
+      </td>
+
+      <td>
+        Allows the user to specify the addresses of the DNS servers available in their network. This field should be changed by the user to match the address(es) of the DNS servers on their network.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        dns\_search:/--dns-search vb.loc
+      </td>
+
+      <td>
+        Allows the user to set the search domain for DNS. This field should be changed by the user to match the search domain that is appropriate for their network.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        hostname:/--hostname
+      </td>
+
+      <td>
+        This field must be modified before running the DME Docker container.  It must be set to the name that matches the Docker container IP address in your network DNS configuration.  
+
+        If you change this field it is recommended that you stop and remove an existing Docker container before running the container with the changed hostname. You do not need to remove any created volumes.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        network\_mode/--network
+      </td>
+
+      <td>
+        This field must be set to host and should *not* be modified.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        container\_name/--name
+      </td>
+
+      <td>
+        The default container name is `dme-docker-container` but can be modified to fit your preference.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        image
+      </td>
+
+      <td>
+        This must be set to [651425670494.dkr.ecr.us-east-1.amazonaws.com/dme-docker](651425670494.dkr.ecr.us-east-1.amazonaws.com/dme-docker) if you pulled the image from the Vbrick docker repo in Amazon, or "dme-docker" if an exported image was provided to you by a Vbrick representative.  
+
+        * \*Note:\*\*  This may, and likely will, be changed with the full release of this feature.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        restart
+      </td>
+
+      <td>
+        Optional field that is used to describe the restart behavior of the container.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        cpuset:/--cpuset-cpus
+      </td>
+
+      <td>
+        Allows you to specify which processors the container is allowed to use in its processing.  Note that this value should be set appropriately based on your use case. Please see [Virtual DME Recommendations](doc:pre-installation-requirements#virtual-dme-hardware-specifications-and-load-recommendations) to make sure you understand the hardware and available load requirements for your specific use case.  
+
+        It is important to specify this value. It is used by the container not only for status but also for determining how many processes and or threads will be spawned by various services within the container.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        mem\_limit:/–memory
+      </td>
+
+      <td>
+        Allows you to restrict the amount of RAM that the container is allowed to use. Note that this number should be set appropriately based on your use case.  Please see [Virtual DME Recommendations](doc:pre-installation-requirements#virtual-dme-hardware-specifications-and-load-recommendations) to make sure you understand the hardware and available load requirements for your specific use case.  
+
+        The RAM usage reported on the DME Docker container web interface will include both the memory used by the DME-specific code plus the memory overhead required by Docker to operate the container. This value will match that reported by the Docker stats command on the Docker host. This is important to note if you have set memory limits for the container in your run command or compose file.  
+
+        This is an optional field.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        memswap\_limit:/--memory-swap
+      </td>
+
+      <td>
+        Allows you to specify the maximum amount of swap available to the container. This field value is the sum of physical ram plus swap. Note that this number should be set appropriately based on your use case.  Please see [Virtual DME Recommendations](doc:pre-installation-requirements#virtual-dme-hardware-specifications-and-load-recommendations) to make sure you understand the hardware and available load requirements for your specific use case.  
+
+        This is an optional field.
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 ### TMPFS Folders Requirements
 
-| Field          | Description                                                                                                                                                     |
-| :------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| tmpfs:/--tmpfs | The DME Docker container requires two tmpfs folders to be created `/run` and `/tmp`. These fields must _not_ be changed in the run command or the Compose file. |
+| Field           | Description                                                                                                                                                     |
+| :-------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| tmpfs\:/--tmpfs | The DME Docker container requires two tmpfs folders to be created `/run` and `/tmp`. These fields must *not* be changed in the run command or the Compose file. |
 
 ### Volume Requirements
 
 `volumes:/-v or --mount` - There are two volumes used by the DME Docker container.  Both are described in the table below.
 
-[block:parameters]
-{
-  "data": {
-    "h-0": "Volume",
-    "h-1": "Description",
-    "0-0": "/sys/fs/cgroup:/sys/fs/cgroup:ro",
-    "0-1": "The services within the DME Docker container are managed by `systemd`.  \n  \n`systemd` running in a Docker container requires read only access to the cgroup folder on the host. For this reason, this read only volume is required by the DME Docker container and must _not_ be modified in the run command or the Compose file.",
-    "1-0": "dme-content-disk:/lvm/--mount source=dme-content-disk,target=/lvm",
-    "1-1": "This volume maps the DME Docker container's persistent data to a Docker volume stored on the host.  \n  \nWhile this volume is required by the DME and the target name is required to be `/lvm`, the name of the Docker volume is not important.  \n  \nKeep in mind that if you are using a Compose file and you modify the volume name under the volumes: section under services: you must make the same name change under the top-level volumes: section. Furthermore, if you allow Docker Compose to create the volume, Docker Compose will prepend the volume name with `compose_`.  \n  \nBy default, Docker places its volumes in the path `/var/lib/docker`. If you wish to change this path to a different location, please refer to <https://docs.docker.com/engine/reference/commandline/dockerd/> for instructions for setting the \"data-root\" run time parameter which can be used for this purpose."
-  },
-  "cols": 2,
-  "rows": 2,
-  "align": [
-    "left",
-    "left"
-  ]
-}
-[/block]
+<Table align={["left","left"]}>
+  <thead>
+    <tr>
+      <th>
+        Volume
+      </th>
 
+      <th>
+        Description
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        /sys/fs/cgroup\:/sys/fs/cgroup:ro
+      </td>
+
+      <td>
+        The services within the DME Docker container are managed by `systemd`.  
+
+        `systemd` running in a Docker container requires read only access to the cgroup folder on the host. For this reason, this read only volume is required by the DME Docker container and must *not* be modified in the run command or the Compose file.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        dme-content-disk:/lvm/--mount source=dme-content-disk,target=/lvm
+      </td>
+
+      <td>
+        This volume maps the DME Docker container's persistent data to a Docker volume stored on the host.  
+
+        While this volume is required by the DME and the target name is required to be `/lvm`, the name of the Docker volume is not important.  
+
+        Keep in mind that if you are using a Compose file and you modify the volume name under the volumes: section under services: you must make the same name change under the top-level volumes: section. Furthermore, if you allow Docker Compose to create the volume, Docker Compose will prepend the volume name with `compose_`.  
+
+        By default, Docker places its volumes in the path `/var/lib/docker`. If you wish to change this path to a different location, please refer to [https://docs.docker.com/engine/reference/commandline/dockerd/](https://docs.docker.com/engine/reference/commandline/dockerd/) for instructions for setting the "data-root" run time parameter which can be used for this purpose.
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 ### Environment Variables
 
 The following commands are used to manage your environment variables:
 
-- Run Command: use `–env`
-- Compose File: use `environment:` 
+* Run Command: use `–env`
+* Compose File: use `environment:` 
 
 | Variable   | Description                                                                                                                                                                                                        |
 | :--------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -291,7 +415,7 @@ The following commands are used to manage your environment variables:
 
 The initial release of the DME Docker container contains the following caveats and restrictions. It is expected that many of these restrictions will no longer apply in subsequent releases.
 
-- The DME **Docker** container will only support the use of one network interface for the initial release. This interface will not be the result of ethernet bonding.
-- You may not change any network settings or the hostname using the DME Web interface but it is permissible within the CLI accessible through SSH. However, you should avoid making any changes to network settings or OS level settings when using the CLI.
-- The [Trace Capture](doc:traceroute-test) feature on the **Diagnostics** menu in the Web interface will allow you to select any of the host interfaces when configuring a packet capture on the DME Docker.
-- The DME utilizes a content disk for storing VOD videos, live HLS content, logs, and other files. In the case of a DME Docker container, this content disk will actually be a Docker volume on the host. While the DME runs an LRU algorithm to manage usage on its content disk, it is your responsibility to ensure that the size of the content disk allows for leftover disk space to operate the host.
+* The DME **Docker** container will only support the use of one network interface for the initial release. This interface will not be the result of ethernet bonding.
+* You may not change any network settings or the hostname using the DME Web interface but it is permissible within the CLI accessible through SSH. However, you should avoid making any changes to network settings or OS level settings when using the CLI.
+* The [Trace Capture](doc:traceroute-test) feature on the **Diagnostics** menu in the Web interface will allow you to select any of the host interfaces when configuring a packet capture on the DME Docker.
+* The DME utilizes a content disk for storing VOD videos, live HLS content, logs, and other files. In the case of a DME Docker container, this content disk will actually be a Docker volume on the host. While the DME runs an LRU algorithm to manage usage on its content disk, it is your responsibility to ensure that the size of the content disk allows for leftover disk space to operate the host.
