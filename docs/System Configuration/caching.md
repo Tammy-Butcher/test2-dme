@@ -36,7 +36,7 @@ The table below defines the memory and disk allotments (percentages of system re
 
 The table also defines a minimum setting (or floor) for each of the values.  These allotments are based on a 75%/25% rule of use that prioritizes in-memory cache use over on-disk cache use. In other words, the DME reserves up to 75% of allowable memory (based on the chart below) for in-memory objects, while the remaining 25% is used for indexes of on-disk caching. By limiting our disk cache index use to 25%, we have also reduced the addressable on-disk cache,
 
-These settings can be configured on the [System Configuration > Streaming](doc:streaming) page in the **Cache System Resources Used** drop-down.
+These settings can be configured on the [System Configuration &gt; Streaming](doc:streaming) page in the **Cache System Resources Used** drop-down.
 
 |            |                 | Dedicated | High    | Normal  | Low     |
 | :--------- | :-------------- | :-------- | :------ | :------ | :------ |
@@ -47,6 +47,6 @@ These settings can be configured on the [System Configuration > Streaming](doc:s
 
 > 👍 Tip
 > 
-> Your system Cache (both memory and disk) can be cleared by the **Clear Cache** button on the [Maintenance > System Maintenance](doc:system-maintenance) page.
+> Your system Cache (both memory and disk) can be cleared by the **Clear Cache** button on the [Maintenance &gt; System Maintenance](doc:system-maintenance) page.
 > 
 > Rebooting your DME will also clear your system cache (both memory and disk).
