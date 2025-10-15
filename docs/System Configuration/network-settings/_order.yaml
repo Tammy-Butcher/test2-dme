@@ -1,3 +1,4 @@
 - fully-qualified-domain-name-fqdn
 - network-interface-cards
 - set-nat-ip-address
+- network-time-synchronization
