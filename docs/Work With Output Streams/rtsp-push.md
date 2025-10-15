@@ -10,49 +10,96 @@ metadata:
 next:
   description: ''
 ---
-Use the **Output Configuration** > **RTSP Push** page to configure streams that will be _pushed_ to a destination device using **Auto Unicast RTP**. Possible destinations include servers such as Darwin, Wowza, another DME, or a CDN. The number of configurable streams is dependent on the model of the DME.
+Use the **Output Configuration** > **RTSP Push** page to configure streams that will be *pushed* to a destination device using **Auto Unicast RTP**. Possible destinations include servers such as Darwin, Wowza, another DME, or a CDN. The number of configurable streams is dependent on the model of the DME.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/aeff5be-rtspPush.png",
-        "rtspPush.png",
-        776
-      ],
-      "align": "center",
-      "caption": "The RTSP Push page configures streams that will be pushed to a destination device using Auto Unicast RTP"
-    }
-  ]
-}
-[/block]
+<Image title="rtspPush.png" alt={776} align="center" src="https://files.readme.io/aeff5be-rtspPush.png">
+  The RTSP Push page configures streams that will be pushed to a destination device using Auto Unicast RTP
+</Image>
 
-[block:parameters]
-{
-  "data": {
-    "h-0": "Field",
-    "h-1": "Description",
-    "0-0": "Stream Name",
-    "0-1": "Name identified on the **MultiProtocol** input for this stream.",
-    "1-0": "Target Name",
-    "1-1": "Sets the stream name on the destination. The **Target Name** has the format **.sdp**.  \n  \nWhen pushing to another DME it is generally most straightforward to reuse the **Stream Name** as the Target Name.",
-    "2-0": "Destination IP/Address:Port",
-    "2-1": "Enter the destination IP address. Override the **Port** if not using the default (554).",
-    "3-0": "User Name",
-    "3-1": "Required if client-side authentication is required by the destination server.",
-    "4-0": "Password",
-    "4-1": "Required if client-side authentication is required on the destination server.",
-    "5-0": "Enable",
-    "5-1": "Default - Disabled - Enables the push.",
-    "6-0": "Status",
-    "6-1": "Read only: Disabled \\| Streaming \\| Waiting for Stream (Input source \\<stream_name> not yet available)"
-  },
-  "cols": 2,
-  "rows": 7,
-  "align": [
-    "left",
-    "left"
-  ]
-}
-[/block]
+<Table align={["left","left"]}>
+  <thead>
+    <tr>
+      <th>
+        Field
+      </th>
+
+      <th>
+        Description
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        Stream Name
+      </td>
+
+      <td>
+        Name identified on the **MultiProtocol** input for this stream.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Target Name
+      </td>
+
+      <td>
+        Sets the stream name on the destination. The **Target Name** has the format **.sdp**.  
+
+        When pushing to another DME it is generally most straightforward to reuse the **Stream Name** as the Target Name.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Destination IP/Address:Port
+      </td>
+
+      <td>
+        Enter the destination IP address. Override the **Port** if not using the default (554).
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        User Name
+      </td>
+
+      <td>
+        Required if client-side authentication is required by the destination server.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Password
+      </td>
+
+      <td>
+        Required if client-side authentication is required on the destination server.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Enable
+      </td>
+
+      <td>
+        Default - Disabled - Enables the push.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Status
+      </td>
+
+      <td>
+        Read only: Disabled \| Streaming \| Waiting for Stream (Input source \<stream\_name> not yet available)
+      </td>
+    </tr>
+  </tbody>
+</Table>
