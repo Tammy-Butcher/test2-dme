@@ -21,39 +21,26 @@ For customers that do not wish to use prepositioning, then viewer usage patterns
 Each DME provides a caching page that outlines the **HLS Remote Hosts and Alternative Sources** settings (provided by Rev).  The HLS-Remote-Hosts provides a list of cloud sources that Rev identifies to the DME and utilized within the playback URLs to the viewers.  The Alternative Sources are all the peer DMEs within the DME mesh.  The table provides the Addresses, and indication if the DME performs secure delivery, if it is a prepositioned DME, and the last time the DME was reachable.
 
 > 🚧 Important!
-> 
+>
 > Vbrick recommends that you not edit this content.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/1ea6ecc-dmeMesh.png",
-        "dmeMesh.png",
-        647
-      ],
-      "align": "center",
-      "caption": "DME prepositioning is set on Rev"
-    }
-  ]
-}
-[/block]
+<Image title="dmeMesh.png" alt={647} align="center" src="https://files.readme.io/1ea6ecc-dmeMesh.png">
+  DME prepositioning is set on Rev
+</Image>
 
+* DMEs can be set as prepositioned on Rev. You cannot set it within the DME.
 
-- DMEs can be set as prepositioned on Rev. You cannot set it within the DME.
-
-- From your DME, if there are no other reachable DMEs (identified within the table) then this DME cannot utilize the DME Mesh.
+* From your DME, if there are no other reachable DMEs (identified within the table) then this DME cannot utilize the DME Mesh.
 
 > 📘 Note
-> 
+>
 > Prepositioning is determined and set by customers. By Default, new DMEs are not Prepositioned. DMEs are defined as prepositioned by system administrators within the Rev interface. Please see Rev Online Help for details.
 
 In terms of improving playback, the DME mesh also focuses on state-of-the-art edge caching and multi-protocol first-time caching. Once the content is in the DME mesh, Vbrick leverages several technologies so it can be distributed and retrieved seamlessly by Vbrick players.
 
 To illustrate the mesh architecture, several common use cases are presented below. Consider the example of 3 DMEs, DME-1 (prepositioned), DME-2, and DME-3 all reachable. DME-1 is the only prepositioned DME, so any new content uploaded to Rev will automatically be downloaded to DME-1. DME-1 currently has the following stored videos: video1.mp4, video2.m3u8 (HLS).
 
-- **General Case 1: HTTPS.** A player requests to play video2.m3u8 from DME-2. DME-2 first checks its local store for the HLS, but cannot find it. Next, DME-2 checks its local caching engine (that has both memory and disk cache), but cannot find it.  DME-2 then checks with the DME Mesh. The Mesh reports DME-1 has the HLS file and delivers it to DME-2. DME-2 caches the HLS file and then delivers it to the player. Playback begins for the user from DME-2. DME-2 will cache all the .ts files (from DME-1). Any additional (new) player requests for the HLS stream to DME-2 will be pulled from its cache.
+* **General Case 1: HTTPS.** A player requests to play video2.m3u8 from DME-2. DME-2 first checks its local store for the HLS, but cannot find it. Next, DME-2 checks its local caching engine (that has both memory and disk cache), but cannot find it.  DME-2 then checks with the DME Mesh. The Mesh reports DME-1 has the HLS file and delivers it to DME-2. DME-2 caches the HLS file and then delivers it to the player. Playback begins for the user from DME-2. DME-2 will cache all the .ts files (from DME-1). Any additional (new) player requests for the HLS stream to DME-2 will be pulled from its cache.
 
      This is the general solution when dealing with HTTP-based content. If it is not local, then the Mesh is inspected. If it is found in the mesh, it is cached on the second DME. If it is not in the Mesh, then DMEs v3.29 (and above) will get the content from the origin, and older DMEs will utilize Ultimate Fallback and the player will fall back to Rev delivery.
 
@@ -69,7 +56,7 @@ As mentioned above, there are both automatic and manual approaches to Prepositin
 
 Rev content will be managed by the DME -- retrieved, stored, and removed (in the future) when the storage space is needed.  All of this content is stored in the `/UploadedVideos` directory at the FTP root. 
 
-For both **Vbrick Rev **and **Vbrick Universal eCDN**, starting with DMEs v3.34, there is a new, additional folder:
+For both **Vbrick Rev** and **Vbrick Universal eCDN**, starting with DMEs v3.34, there is a new, additional folder:
 
 `/UploadedVideos/ManuallyManaged`
 
@@ -79,6 +66,6 @@ Here is an example URL for playing HLS that was copied to a subfolder called "mo
 
 `https://myDMEName.myCompanyName.com/UploadedVideos/ManuallyManaged/movie1/master.m3u8`
 
-The DME mesh is fully available and active for content in the manually managed folder so if your playback URL references a DME that does _not_ have the content locally that DME will check all other DMEs in the mesh and will automatically retrieve, serve, and cache the content if it's available on another DME. 
+The DME mesh is fully available and active for content in the manually managed folder so if your playback URL references a DME that does *not* have the content locally that DME will check all other DMEs in the mesh and will automatically retrieve, serve, and cache the content if it's available on another DME. 
 
-It is important to note that when using this **Manually Managed Prepositioning** feature (in either **Vbrick Rev** or **Vbrick Universal eCDN**) that you _must_ monitor the folder and available content disk space using the DME** VBAdmin** or  **SSH **admin shell.  Additionally, you must use FTP to delete outdated content within this folder as it will not be automatically deleted.  We recommend keeping the DME content used space below the recommended 85% (it will trigger alerts if higher.)
+It is important to note that when using this **Manually Managed Prepositioning** feature (in either **Vbrick Rev** or **Vbrick Universal eCDN**) that you *must* monitor the folder and available content disk space using the DME **VBAdmin** or  **SSH** admin shell.  Additionally, you must use FTP to delete outdated content within this folder as it will not be automatically deleted.  We recommend keeping the DME content used space below the recommended 85% (it will trigger alerts if higher.)
