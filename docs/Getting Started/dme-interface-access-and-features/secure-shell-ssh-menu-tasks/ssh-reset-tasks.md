@@ -10,22 +10,9 @@ metadata:
 next:
   description: ''
 ---
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/0e221192f98cf691100581db1456df0fe8b68ebfe15912654147e17b22736eed-sshresetTasks.png",
-        "",
-        "SSH Reset Options"
-      ],
-      "align": "center",
-      "caption": "SSH Reset Options"
-    }
-  ]
-}
-[/block]
-
+<Image alt="SSH Reset Options" align="center" src="https://files.readme.io/0e221192f98cf691100581db1456df0fe8b68ebfe15912654147e17b22736eed-sshresetTasks.png">
+  SSH Reset Options
+</Image>
 
 ## Reset to Default Settings
 
@@ -35,7 +22,7 @@ The same task may be executed from the **System Configuration** > [Manage Config
 
 ## Reset to Factory Default Settings
 
-This task resets _ALL_ settings (including network and passwords) to factory defaults. Use with caution.
+This task resets *ALL* settings (including network and passwords) to factory defaults. Use with caution.
 
 The same task maybe be executed from the **System Configuration** > [Manage Configuration](doc:configuration-files-and-factory-defaults) form in the DME. This task requires a system reboot. Please do not reboot during any upgrade activity (identified at the top of the screen).
 
