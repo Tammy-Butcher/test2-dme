@@ -2,3 +2,4 @@
 - rtsp-push
 - rtp-relay
 - transport-stream-out
+- vbrick-multicast
