@@ -18,7 +18,7 @@ The RAID arrays built into the **Models 7550** and **7570** (seen below) are muc
 
 All of the models have excellent throughput performance and are designed to manage occasional traffic bursts exceed recommended performance characteristics. The throughput recommendations are based on a combination of input and output. For example, a Model 7530 (with 250 Mbps throughput) can support four 1 Mbps streams in, and reflect out 96 1 Mbps unicast streams of RTP or RTMP (any combination that equals 250 Mbps).
 
-Also keep in mind that one multicast stream out counts as a single stream from a bandwidth perspective, regardless of how many users are watching. _Please refer to the latest [Pre-Installation Requirements](doc:pre-installation-requirements) for complete hardware specifications._
+Also keep in mind that one multicast stream out counts as a single stream from a bandwidth perspective, regardless of how many users are watching. *Please refer to the latest[Pre-Installation Requirements](doc:pre-installation-requirements) for complete hardware specifications.*
 
 ## DME Software-Only Version
 
