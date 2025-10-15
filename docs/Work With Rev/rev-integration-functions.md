@@ -19,7 +19,7 @@ EdgeIngest easily allows admins to bulk ingest content up into the Vbrick Rev sy
 This is a simple and handy method for uploading Video on Demand (VOD) content. This feature is limited to Vbrick Rev.
 
 > 📘 Note
-> 
+>
 > Admins should be aware of local bandwidth constraints and impacts when uploading multiple large media (with metadata) files. Admins can limit network use and saturation by uploading the media and metadata files in small batches during low use periods.
 
 The following steps outline the use of EdgeIngest to upload videos from any DME to Rev:
