@@ -11,21 +11,9 @@ next:
   description: ''
 ---
 The **Monitor** > **Upload Log** page is used to provide status on files that Rev ingests from the DME. The date, time, file name, and status of each ingestion is provided.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/6909c9a-uploadLog.png",
-        "uploadLog.png",
-        659,
-        216,
-        "#e5e5e7"
-      ]
-    }
-  ]
-}
-[/block]
+
+![659](https://files.readme.io/6909c9a-uploadLog.png "uploadLog.png")
+
 The log includes the following status updates:
 
 * Ingested successfully (no errors)
