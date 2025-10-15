@@ -12,21 +12,7 @@ next:
 ---
 The **Diagnostics** > **Ping Test** utility enables you to enter a domain name or IP (IPv4 or IPv6) to ping another device from the DME to make sure it may be reached.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/ea09908-pingTest.png",
-        "pingTest.png",
-        ""
-      ],
-      "align": "center"
-    }
-  ]
-}
-[/block]
-
+<Image title="pingTest.png" align="center" src="https://files.readme.io/ea09908-pingTest.png" />
 
 | Field                    | Description                                                                                                                             |
 | :----------------------- | :-------------------------------------------------------------------------------------------------------------------------------------- |
