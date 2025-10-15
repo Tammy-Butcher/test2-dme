@@ -14,22 +14,10 @@ The DME's **System Configuration** menu option controls many system settings inc
 
 The **Network** setting specifies a DME's network options available including the ability to set a FQDN, network interface cards, and a domain name server.  Each network setting is described in the topics in this section.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/4a1a58d-network.png",
-        null,
-        "The System Configuration > Network option provides access to the DME network system settings"
-      ],
-      "align": "center",
-      "caption": "The System Configuration > Network option provides access to the DME network system settings."
-    }
-  ]
-}
-[/block]
+<Image alt="The System Configuration > Network option provides access to the DME network system settings" align="center" src="https://files.readme.io/4a1a58d-network.png">
+  The System Configuration > Network option provides access to the DME network system settings.
+</Image>
 
 > 📘 Note
-> 
+>
 > This is just a few of the options available. Please view additional Network help topics for more settings.
