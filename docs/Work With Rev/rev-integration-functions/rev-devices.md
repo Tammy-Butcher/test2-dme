@@ -18,26 +18,14 @@ A Vbrick Multi-Format **Set Top Box (MF-STB)** can be identified (via multicast 
 
 **Requirements**
 
-- Rev v7.16+
-- DME v3.16+
+* Rev v7.16+
+* DME v3.16+
 
 The **Rev Devices** > **Configuration** page displays the following information for MF-STBs.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/79559cf-stbConnector.png",
-        "stbConnector.png",
-        1479
-      ],
-      "align": "center",
-      "caption": "Rev works in conjunction with on-premise DMEs to communicate to and from each MF-STB"
-    }
-  ]
-}
-[/block]
+<Image title="stbConnector.png" alt={1479} align="center" src="https://files.readme.io/79559cf-stbConnector.png">
+  Rev works in conjunction with on-premise DMEs to communicate to and from each MF-STB
+</Image>
 
 ## Discovered Set Top Boxes
 
@@ -47,32 +35,30 @@ The table contains information about each MF-STB. Clicking on the header for any
 
 ![](https://files.readme.io/2d12902-discoveredSTB.png "discoveredSTB.png")
 
+* **Show/Hide Last Set Top Box Report**: Toggle that will display/hide the most recent STB report.
 
+* **Go To Rev Communications Log**: Displays a list of the most recent Rev interface communications logs. You may also manually generate new logs from this form.
 
-- **Show/Hide Last Set Top Box Report**: Toggle that will display/hide the most recent STB report.
+* **Refresh STB List**: Manually refresh the list of discovered STBs.
 
-- **Go To Rev Communications Log**: Displays a list of the most recent Rev interface communications logs. You may also manually generate new logs from this form.
+* **Filter STB List**: Filters the list of found STBs.
 
-- **Refresh STB List**: Manually refresh the list of discovered STBs.
+* **IP-Address**: IP address of the STB.
 
-- **Filter STB List**: Filters the list of found STBs.
+* **Host-Name**: Host name of the STB as identified with the MF-STB SAP message.
 
-- **IP-Address**: IP address of the STB.
+* **Model**: Software version of the STB. Please use this to identify MF-STBs that need updating.
 
-- **Host-Name**: Host name of the STB as identified with the MF-STB SAP message.
+* **S/W-Version**: Software version of the STB.
 
-- **Model**: Software version of the STB. Please use this to identify MF-STBs that need updating.
+* **Last-Report**: The date and time a report was obtained from the STB. This is a periodic update, so this value will change.
 
-- **S/W-Version**: Software version of the STB.
-
-- **Last-Report**: The date and time a report was obtained from the STB. This is a periodic update, so this value will change.
-
-- **Status**: The status of the STB. Possible states are:
-  - Ok: The STB was accessed successfully by the DME
-  - Invalid Credentials: The DME could not log-in to the STB
-  - WebServiceDisabled: Remote access to the STB is disabled
-  - Error: The operation failed for an unknown reason
+* **Status**: The status of the STB. Possible states are:
+  * Ok: The STB was accessed successfully by the DME
+  * Invalid Credentials: The DME could not log-in to the STB
+  * WebServiceDisabled: Remote access to the STB is disabled
+  * Error: The operation failed for an unknown reason
 
 > 📘 Note
-> 
+>
 > Clicking **Show/Hide Last Set Top Box Rev Report** will show the formatted information that the DME sends to Rev. This is to be used in conjunction with Vbrick Customer Support if necessary as requested. Clicking Go to **Rev Communications Log** links to the page where the DME to Rev interface logs may be viewed. The full logs are also available within the DME Logs directory. This is also to be used in conjunction with Vbrick Customer Support if necessary as requested.
