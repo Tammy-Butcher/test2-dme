@@ -10,22 +10,9 @@ metadata:
 next:
   description: ''
 ---
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/62afd2f1b805a361b5750266b8fdb8274346aca1bfb7a766c2d59937df36703d-sshresetTasks.png",
-        "",
-        ""
-      ],
-      "align": "center",
-      "caption": "SSH Reset Tasks"
-    }
-  ]
-}
-[/block]
-
+<Image alt="SSH Reset Tasks" align="center" src="https://files.readme.io/62afd2f1b805a361b5750266b8fdb8274346aca1bfb7a766c2d59937df36703d-sshresetTasks.png">
+  SSH Reset Tasks
+</Image>
 
 ## Sysuser Login Failures
 
