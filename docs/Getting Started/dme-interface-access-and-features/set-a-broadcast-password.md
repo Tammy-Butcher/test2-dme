@@ -14,31 +14,18 @@ Use the **User Configuration** > **Stream Input Authentication** page to configu
 
 Only one login user name and password are used for all inputs into the system. The login name cannot be the same name as the administrator name.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/b6b8b79-streamInputAuth.png",
-        "streamInputAuth.png",
-        835
-      ],
-      "align": "center",
-      "caption": "The Stream Input Authentication page allows you to configure a broadcast password."
-    }
-  ]
-}
-[/block]
+<Image title="streamInputAuth.png" alt={835} align="center" src="https://files.readme.io/b6b8b79-streamInputAuth.png">
+  The Stream Input Authentication page allows you to configure a broadcast password.
+</Image>
 
-
-- **Current Stream Input Authentication User Name**: This read only field displays your current Stream Authentication username.
+* **Current Stream Input Authentication User Name**: This read only field displays your current Stream Authentication username.
 
    The defaults (broadcast |broadcast for user name and password) are set at install time. Before enabling **Stream Input Authentication** for the scenarios listed above, please reset these values.
 
-- **New User Name**: Enter new announce user name.
+* **New User Name**: Enter new announce user name.
 
-- **New Password**: Enter new announce password.
+* **New Password**: Enter new announce password.
 
-  - This password cannot use the following special characters:  colon (:), question mark (?), ampersand (&), forward slash (/), backtick (\`), space (. ), and at-symbol (@).
+  * This password cannot use the following special characters:  colon (:), question mark (?), ampersand (&), forward slash (/), backtick (\`), space (. ), and at-symbol (@).
 
-- **Re-enter New Password**: Re-enter new password and be sure to click **Change Password**.
+* **Re-enter New Password**: Re-enter new password and be sure to click **Change Password**.
