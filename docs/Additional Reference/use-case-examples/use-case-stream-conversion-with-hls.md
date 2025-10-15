@@ -15,53 +15,13 @@ To help illustrate the use of the [Stream Conversion](doc:stream-conversion) fea
 Locally creating an adaptive bitrate stream. Consider a remote DME that has limited bandwidth. It may be necessary to push/pull a single higher bitrate stream to that DME, and then transrate it to a number of reduced bitrate/resolution streams. Then, within the HLS Streaming page, they can be combined into a single stream for adaptive playback reflecting the unique needs of the remote viewers.
 
 Create a Mobile sized Resolution and Bitrate stream. The DME can, if needed, take a stream and using this feature reduce the bitrate and resolution to be better provisioned to smaller form-factor mobile players.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/958232c-usecaseConversion_1.PNG",
-        "usecaseConversion_1.PNG",
-        1016,
-        965,
-        "#000000"
-      ]
-    }
-  ]
-}
-[/block]
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/409e619-usecaseConversion_2.PNG",
-        "usecaseConversion_2.PNG",
-        1004,
-        1204,
-        "#000000"
-      ]
-    }
-  ]
-}
-[/block]
+![1016](https://files.readme.io/958232c-usecaseConversion_1.PNG "usecaseConversion_1.PNG")
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/bfa39a3-usecaseConversionHLS.PNG",
-        "usecaseConversionHLS.PNG",
-        1150,
-        718,
-        "#000000"
-      ]
-    }
-  ]
-}
-[/block]
+![1004](https://files.readme.io/409e619-usecaseConversion_2.PNG "usecaseConversion_2.PNG")
+
+![1150](https://files.readme.io/bfa39a3-usecaseConversionHLS.PNG "usecaseConversionHLS.PNG")
+
 ## Stream Conversion Best Practices
 
 * If possible, based on available bandwidth, it is better to use purpose built devices (e.g., our family of 9000 encoders) to create the multiple bitrate necessary for adaptive playback. Then, use the DME to combine and serve the streams.
