@@ -10,22 +10,9 @@ metadata:
 next:
   description: ''
 ---
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/4f82558dc5ff4d98c26c8da7467a177fe5581c4e51b471b63429747e76ad99cc-sshNetworkMonitoringTasks.png",
-        "",
-        ""
-      ],
-      "align": "center",
-      "caption": "SSH Network Monitoring Tasks"
-    }
-  ]
-}
-[/block]
-
+<Image alt="SSH Network Monitoring Tasks" align="center" src="https://files.readme.io/4f82558dc5ff4d98c26c8da7467a177fe5581c4e51b471b63429747e76ad99cc-sshNetworkMonitoringTasks.png">
+  SSH Network Monitoring Tasks
+</Image>
 
 ## Review Network Settings
 
