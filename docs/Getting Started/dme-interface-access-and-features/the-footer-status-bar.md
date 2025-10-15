@@ -12,22 +12,9 @@ next:
 ---
 The DME **Status Bar** on the bottom of the VBAdmin page provides near-real time updates and reporting on DME functions. The values on the bar update every two minutes or you may use the Refresh link to update them manually as needed. The different sections and what they mean are described below.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/75bed30-statusBar.png",
-        "statusBar.png",
-        1204
-      ],
-      "align": "center",
-      "caption": "The Status Bar provides real-time updates and reporting on DME functions"
-    }
-  ]
-}
-[/block]
-
+<Image title="statusBar.png" alt={1204} align="center" src="https://files.readme.io/75bed30-statusBar.png">
+  The Status Bar provides real-time updates and reporting on DME functions
+</Image>
 
 ## Status Bar Sections
 
@@ -35,12 +22,12 @@ The DME **Status Bar** on the bottom of the VBAdmin page provides near-real time
 
 This section is the far left box of the footer status bar and displays the software version the DME is running along with its status and stream authorization states.  Specifically:
 
-- **DME Version**: Hover over the version number to display uptime.
-- **Overall DME Status**: Next to the DME version is the overall DME status. It contains a **Normal**, **Warning**, or **Alert** status state.
-- **Server State**: The “Server is Running” message indicates that the **MultiProtocol Server (MPS)** is running. It changes to “Server is Idle” if the MPS is _not_ running (e.g., if the **Disable Server** button on the right of the footer is toggled.) The field’s background color also changes indicating its health status. The server status (Normal, Warning, and Alert) is tied to Content Disk, CPU, Throughput and Memory status – any elevation of these statuses is reflected in this status.
-- **Stream Authorization Status**: Displays enabled or disabled status.
-- [License Expiry](doc:license-types-and-activating-new-features): Any pending **License Expiry** dates (within 45 days of expiry) if applicable.
-- [Local Accounts](https://revdocs.vbrick.com/docs/dme-accounts): Displays enabled or disabled status.
+* **DME Version**: Hover over the version number to display uptime.
+* **Overall DME Status**: Next to the DME version is the overall DME status. It contains a **Normal**, **Warning**, or **Alert** status state.
+* **Server State**: The “Server is Running” message indicates that the **MultiProtocol Server (MPS)** is running. It changes to “Server is Idle” if the MPS is *not* running (e.g., if the **Disable Server** button on the right of the footer is toggled.) The field’s background color also changes indicating its health status. The server status (Normal, Warning, and Alert) is tied to Content Disk, CPU, Throughput and Memory status – any elevation of these statuses is reflected in this status.
+* **Stream Authorization Status**: Displays enabled or disabled status.
+* [License Expiry](doc:license-types-and-activating-new-features): Any pending **License Expiry** dates (within 45 days of expiry) if applicable.
+* [Local Accounts](https://revdocs.vbrick.com/docs/dme-accounts): Displays enabled or disabled status.
 
 ### MPS Streams
 
@@ -112,9 +99,9 @@ Note: Unlike the other measures, this measure is not compared to thresholds and 
 
 This section is the far right box of the footer status bar and displays the various statuses of the DME FQDN and RTP and MPS running states.  Specifically:
 
-- **DME** [FQDN](doc:fully-qualified-domain-name-fqdn) and **IP Address**: Hover over to view uptime.
-- **MPS Running Status**: Displays true or false.  Hover over to view current MPS version.
-- **RTP Running Status**: Displays true or false.
-- [Rev Interface](doc:enable-and-configure-the-rev-interface): Indicates if the DME is linked to Rev and if the Rev Interface is running. If either of these is red, it indicates a problem connecting with Rev. Please check your **Rev Interface** page.
-- **Refresh Countdown**: Countdown until the status bar values are refreshed automatically by the DME. Click the **Refresh** text link to refresh them manually. If the status bar does _not_ automatically refresh, you may also refresh the whole page using your browser refresh.
-- **MPS Disable Server** button: Toggles the status of the MPS server.
+* **DME** [FQDN](doc:fully-qualified-domain-name-fqdn) and **IP Address**: Hover over to view uptime.
+* **MPS Running Status**: Displays true or false.  Hover over to view current MPS version.
+* **RTP Running Status**: Displays true or false.
+* [Rev Interface](doc:enable-and-configure-the-rev-interface): Indicates if the DME is linked to Rev and if the Rev Interface is running. If either of these is red, it indicates a problem connecting with Rev. Please check your **Rev Interface** page.
+* **Refresh Countdown**: Countdown until the status bar values are refreshed automatically by the DME. Click the **Refresh** text link to refresh them manually. If the status bar does *not* automatically refresh, you may also refresh the whole page using your browser refresh.
+* **MPS Disable Server** button: Toggles the status of the MPS server.
