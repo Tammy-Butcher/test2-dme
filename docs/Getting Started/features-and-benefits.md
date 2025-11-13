@@ -22,8 +22,10 @@ next:
 
 * **Robust Appliance Design** – Requiring only a web browser for management, the DME eliminates the need to separately manage patches and security updates on commercial server operating systems.
 
-* **Secure** – Designed to meet the security requirements of demanding government information assurance policies, the DME is deployed as a locked down software appliance with no root, sudo, or general OS command line access.  
+* **Secure** – Designed to meet the security requirements of demanding government information assurance policies, the DME is deployed as a locked down software appliance with no root, sudo, or general OS command line access.
 
 * **Firewall Friendly** – Supports video on demand content via HTTP download; eliminating barriers imposed by network security policies.
 
 * **Enhanced User Experience** – Increases user adoption and impact by assuring outstanding picture quality and response from video applications. The DME easily accommodates increased user demand without degrading performance or the user experience.
+
+* **This is the new feature for v3.35 update!**
