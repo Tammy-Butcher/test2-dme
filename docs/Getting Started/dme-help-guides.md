@@ -10,25 +10,43 @@ metadata:
 next:
   description: ''
 ---
-Welcome to the **Vbrick DME Documentation Hub**! 
+Welcome to the **Vbrick DME Documentation Hub**!
 
 Here we have developed comprehensive technical reference material and Help guides to assist in installing, updating, configuring, and using the Vbrick Distributed Media Engine (DME).
 
 > Use the navigation menus and search function to find answers to all your DME questions.  And be sure to check out the latest [Release Notes](https://dmedocs.vbrick.com/changelog) for ongoing updates and patch releases!
 
-<Image align="left" width="200em" src="https://files.readme.io/7ea1aa37a7ae9a8878bacb7ebc1b767cacab9162938338089ec72f7b739e2ab2-dmeHelpVersion.png" />
+<Image align="left" border={false} width="200em" src="https://files.readme.io/7ea1aa37a7ae9a8878bacb7ebc1b767cacab9162938338089ec72f7b739e2ab2-dmeHelpVersion.png" />
 
- The DME current release is always the default version of Help displayed. However, you can always use the Help version drop-down menu to view previously supported releases as needed, including recommended On-Prem versions and the current In-Progress version.
+The DME current release is always the default version of Help displayed. However, you can always use the Help version drop-down menu to view previously supported releases as needed, including recommended On-Prem versions and the current In-Progress version.
 
 Use the links below to get started with our most popular guides.
 
-<Image align="left" width="32em" src="https://files.readme.io/4986891dce723394c80b34f8b89b97d4eff1954c00e55c14cc64ad9e014a108e-readMeGettingStarted.png" />
+<Image align="left" border={false} width="32em" src="https://files.readme.io/4986891dce723394c80b34f8b89b97d4eff1954c00e55c14cc64ad9e014a108e-readMeGettingStarted.png" />
 
 ### Getting Started
 
 Start here if you are new to the DME. Review the various DME server models, technical requirements, and the DME user interface. This section also details how to install or upgrade a DME.
 
 ***
+
+<Cards columns={4}>
+  <Card title="First Card" href="https://refactored-dme.readme.io/docs/server-models" icon="fa-home" target="_blank">
+    DME Server Models
+  </Card>
+
+  <Card title="Second Card" icon="fa-user">
+    *Technical Requirements*
+  </Card>
+
+  <Card title="Third Card" icon="fa-star">
+    > Compatibility Matrix
+  </Card>
+
+  <Card title="Fourth Card" icon="fa-question">
+    **Deployment Planning**
+  </Card>
+</Cards>
 
 * [DME Server Models](doc:server-models)
 * [Technical Requirements](doc:supported-browsers)
@@ -39,11 +57,11 @@ Start here if you are new to the DME. Review the various DME server models, tech
 
 <br />
 
-<Image align="left" width="32em" src="https://files.readme.io/323c89062d20afc656210aac07179f7e06e3c3e844950d8292675427a715d246-readMeSecurity.png" />
+<Image align="left" border={false} width="32em" src="https://files.readme.io/323c89062d20afc656210aac07179f7e06e3c3e844950d8292675427a715d246-readMeSecurity.png" />
 
 ### System Configuration Guides
 
-System configuration covers everything from network setup, system security, and how to activate new features. Look to this section once you have the DME upgraded or installed to make sure you have it secured and operating smoothly. 
+System configuration covers everything from network setup, system security, and how to activate new features. Look to this section once you have the DME upgraded or installed to make sure you have it secured and operating smoothly.
 
 ***
 
@@ -57,7 +75,7 @@ System configuration covers everything from network setup, system security, and 
 
 <br />
 
-<Image align="left" width="32em" src="https://files.readme.io/f9267f583225f32d0d8c6895f74c4bbc79ce616b3b585860a37e7eb6fe721b04-readMeUseWith.png" />
+<Image align="left" border={false} width="32em" src="https://files.readme.io/f9267f583225f32d0d8c6895f74c4bbc79ce616b3b585860a37e7eb6fe721b04-readMeUseWith.png" />
 
 ### Video Streaming and Integrating with Rev
 
@@ -72,7 +90,7 @@ Learn how to set up input and output streams and how to integrate the DME with V
 
 <br />
 
-<Image align="left" width="32em" src="https://files.readme.io/c9ccda9353875c6f83fc6a8ea97dd2f986d15b1148232b779f40486b92fbc82f-troubleshooting.png" />
+<Image align="left" border={false} width="32em" src="https://files.readme.io/c9ccda9353875c6f83fc6a8ea97dd2f986d15b1148232b779f40486b92fbc82f-troubleshooting.png" />
 
 ### Troubleshooting and Maintenance
 
