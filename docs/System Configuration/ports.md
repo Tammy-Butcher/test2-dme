@@ -12,13 +12,11 @@ next:
 ---
 The **Ports** fields under **System Configuration** allows you to configure the DME's data and server ports.
 
-<Image alt="The Ports option in System Configuration allows you to specify data and server ports" align="center" src="https://files.readme.io/a0fc01f-ports.png">
-  The Ports option in System Configuration allows you to specify data and server ports
-</Image>
+<Image align="center" alt="The Ports option in System Configuration allows you to specify data and server ports" border={false} caption="The Ports option in System Configuration allows you to specify data and server ports" src="https://files.readme.io/a0fc01f-ports.png" />
 
 > ❗️ Caution
 >
-> For correct operation of the **DME Mesh** and shared caches, do *not* change the **HTTP** and HTTP default ports. Additionally, changing the HTTP Caching ICP Port must be changed on ALL DMEs and is therefore not recommended.
+> For correct operation of the **DME Mesh** and shared caches, do _not_ change the **HTTP** and HTTP default ports. Additionally, changing the HTTP Caching ICP Port must be changed on ALL DMEs and is therefore not recommended.
 
 <Table align={["left","left"]}>
   <thead>
@@ -40,7 +38,7 @@ The **Ports** fields under **System Configuration** allows you to configure the 
       </td>
 
       <td>
-        Default = 554\*\*  
+        Default = 554**
 
         RTSP port for **VOD** streams from RTP server. Cannot be changed. Used to receive an **RTP Auto Unicast stream** as input and to serve **RTSP RTP clients** for output.
       </td>
@@ -52,7 +50,7 @@ The **Ports** fields under **System Configuration** allows you to configure the 
       </td>
 
       <td>
-        Default = 1935  
+        Default = 1935
 
         MPS Server Port for **RTMP streams** from MPS server. Allows MPS streams as input. For example a Vbrick H.264 encoder can be an MPS input stream. Note: This was formerly labeled the RTMP Server Port.
       </td>
@@ -64,7 +62,7 @@ The **Ports** fields under **System Configuration** allows you to configure the 
       </td>
 
       <td>
-        Default = 4443  
+        Default = 4443
 
         MPS Server Port for **RTMPS streams (secure RTMP)** to be pushed into DME/MPS server.
       </td>
@@ -76,9 +74,9 @@ The **Ports** fields under **System Configuration** allows you to configure the 
       </td>
 
       <td>
-        Default = 5544  
+        Default = 5544
 
-        The port number used by the Multi‑Protocol Server to *listen* for announcements.
+        The port number used by the Multi‑Protocol Server to _listen_ for announcements.
       </td>
     </tr>
 
@@ -88,9 +86,9 @@ The **Ports** fields under **System Configuration** allows you to configure the 
       </td>
 
       <td>
-        Default = 8181  
+        Default = 8181
 
-        Specifies the *listener* port for **HTTP management connections** as follows: `http://IPaddress:port` where IPaddress = **DME IP address** or **hostname** and **port**.  
+        Specifies the _listener_ port for **HTTP management connections** as follows: `http://IPaddress:port` where IPaddress = **DME IP address** or **hostname** and **port**.
 
         The port number can be moved to another port if required as long as it does not conflict with another existing port in the system.
       </td>
@@ -102,9 +100,9 @@ The **Ports** fields under **System Configuration** allows you to configure the 
       </td>
 
       <td>
-        Default = 8383  
+        Default = 8383
 
-        Specifies the *listener* port for **management** and **HTTPS connections**. Used for HTTPS connections when enabled on the **Security** configuration page. Can be moved to another port number if required.
+        Specifies the _listener_ port for **management** and **HTTPS connections**. Used for HTTPS connections when enabled on the **Security** configuration page. Can be moved to another port number if required.
       </td>
     </tr>
 
@@ -114,7 +112,7 @@ The **Ports** fields under **System Configuration** allows you to configure the 
       </td>
 
       <td>
-        Default = 80  
+        Default = 80
 
         Sets the port used for **progressive download (HTTP)**, **HLS streams**, and **Caching**. This port can be **80** or a safe port in the range **1025–65535**. An error message will indicate an invalid port.
       </td>
@@ -126,7 +124,7 @@ The **Ports** fields under **System Configuration** allows you to configure the 
       </td>
 
       <td>
-        Default=443  
+        Default=443
 
         Secure HTTP port
       </td>
@@ -138,7 +136,7 @@ The **Ports** fields under **System Configuration** allows you to configure the 
       </td>
 
       <td>
-        Default = 8080  
+        Default = 8080
 
         Sets the port for **HTTP tunneling via RTSP**. The default is 8080 but if you are streaming HTTP directly from a DME via the Internet, it is a common practice to change this to **80** and to set any other service using port 80 to a different port.
       </td>
@@ -150,7 +148,7 @@ The **Ports** fields under **System Configuration** allows you to configure the 
       </td>
 
       <td>
-        This defines the *starting* port of a *range of 8 consecutive UPD ports* used for **ICP**. This value sets the ports used to discover multiple **web caches** on the **local (source) DME** and on **remote DMEs**. The default UDP port is **3130**, and it is highly recommended that this value is *not* changed. Changing this port will impact DME shared caching (MESH). If you must change this range of ports, then it must be changed (to the same value) on *ALL* DMEs within your deployment.
+        This defines the _starting_ port of a _range of 8 consecutive UPD ports_ used for **ICP**. This value sets the ports used to discover multiple **web caches** on the **local (source) DME** and on **remote DMEs**. The default UDP port is **3130**, and it is highly recommended that this value is _not_ changed. Changing this port will impact DME shared caching (MESH). If you must change this range of ports, then it must be changed (to the same value) on _ALL_ DMEs within your deployment.
       </td>
     </tr>
 
@@ -160,7 +158,7 @@ The **Ports** fields under **System Configuration** allows you to configure the 
       </td>
 
       <td>
-        Default = 20  
+        Default = 20
 
         Defined for FTP data port; works for FTPS as well.
       </td>
@@ -172,9 +170,9 @@ The **Ports** fields under **System Configuration** allows you to configure the 
       </td>
 
       <td>
-        Default = 21  
+        Default = 21
 
-        Defined for FTP command port; works for FTPS as well. The FTP client that connects to the DME must use *ACTIVE* mode to utilize this port.
+        Defined for FTP command port; works for FTPS as well. The FTP client that connects to the DME must use _ACTIVE_ mode to utilize this port.
       </td>
     </tr>
 
@@ -195,6 +193,16 @@ The **Ports** fields under **System Configuration** allows you to configure the 
 
       <td>
         This port is set at 222 and cannot be edited.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        **3.35 Port Update**
+      </td>
+
+      <td>
+        **This is the branch update.**
       </td>
     </tr>
   </tbody>
